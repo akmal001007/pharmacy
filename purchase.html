@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURCHASE</title>
+
+    <!-- desgin of Login form  -->
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            width: 100%;
+            border: 2px solid #ccc;
+        }
+
+        /* .login_img {
+            width: 100%;
+            text-align: center;
+            margin: 15px 0 15px 0;
+        } */
+
+        /* .login_img img {
+            width: 20%;
+        } */
+
+        .login_container {
+            display: flex;
+            flex-direction: column;
+            margin: 100px 100px 0 100px;
+        }
+
+        form label{
+            font-size: medium;
+            font-weight: bold;
+            margin: 0 20px;
+
+        }
+
+        form input {
+            padding: 10px;
+            margin: 5px 20px;
+        }
+
+        form input:hover {
+            cursor: pointer;
+            border: 2px solid dodgerblue;
+        }
+
+        .login_btn {
+            margin: 10px 20px;
+        }
+        .login_btn button {
+            width: 100%;
+            padding: 10px 12px;
+            background-color: rgb(68, 156, 244);
+            border: 1px solid gray;
+        }
+
+        .login_btn button:hover {
+            background-color: dodgerblue;
+            cursor: pointer;
+        }
+
+        .pur_cancel_btn {
+            margin: 0 0 10px 120px;
+        }
+
+        .pur_cancel_btn button {
+            padding: 10px 12px;
+            background-color: #f44436;
+            border: none;
+            color: white;
+            /* margin-top: 0; */
+        }
+
+        .pur_cancel_btn button:hover {
+            color: black;
+            background-color: #f44425;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <!-- <div class="login_img">
+            <img src="images/loginmg.jpg" alt="">
+        </div> -->
+
+        <div class="login_container">
+            <label for="">Name</label>
+            <input type="text" placeholder="username" required>
+
+            <label for="">Email</label>
+            <input type="email" placeholder="email" required>
+
+            <label for="">Account-Number</label>
+            <input type="password" placeholder="XXXXX-XXXXX" required>
+
+            <div class="login_btn">
+                <button>Purchase</button>
+            </div>
+        </div>
+
+        <div class="pur_cancel_btn">
+            <button onclick="pur_cancel_btn()">Cancel</button>
+        </div>
+    </form>
+
+    <!-- java script for purchase button  -->
+    <script>
+        function pur_cancel_btn(){
+            window.location.href = "pharmacy.html";
+        }
+    </script>
+</body>
+</html>

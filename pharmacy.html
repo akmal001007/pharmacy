@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARMACY</title>
+    <!-- <link rel="stylesheet" href="pharmacy.css"> -->
+    <script src="pharmacy.js"></script>
+
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+/* header design  */
+header {
+    display: flex;
+    background-color: rgba(30, 143, 255, 0.894);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left_header {
+    width: 80%;
+}
+
+.right_header {
+    width: 10%;
+    /* display: flex; */
+}
+.logo {
+    height: 50px;
+    width: 10%;
+}
+
+.logo img {
+    height: 90px;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul a {
+    text-decoration: none;
+    padding: 7px;
+    color: black;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header ul a:hover {
+    background-color: rgb(5, 110, 215);
+    color: white;
+}
+
+.right_header {
+    width: 10%;
+    margin-right: 20px;
+}
+
+.right_header button a {
+    color: black;
+
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.right_header button {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid rgb(155, 158, 163);
+    border-radius: 10px;
+}
+
+.right_header button:hover {
+    background-color: rgb(5, 110, 215);
+    color: white;
+}
+
+.right_header button a:hover {
+    color: white;
+} 
+/* text area design  */
+.title_area {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+
+.title_area p {
+    color: navy;
+    font-weight: 50px;
+    font-size: larger;
+    margin-top: 0;
+}
+
+/* tablets design  */
+.tab1_container, .tab2_container {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+
+.tab1_container .tab_box {
+    width: 25%;
+    border: 1px solid #ccc;
+    box-shadow: 6px 6px 10px gray;
+    margin: 0 40px;
+}
+.tab2_container .tab_box {
+    width: 25%;
+    border: 1px solid #ccc;
+    box-shadow: 6px 6px 10px gray;
+    margin: 0 30px;
+}
+
+.tab_box img {
+    width: 100%;
+    border-bottom: 1px solid rgb(232, 229, 229);
+}
+
+.tab_box img:hover {
+    opacity: 0.6;
+}
+
+.tab_content {
+    text-align: center;
+    margin-top: 10px;
+}
+.tab_content a {
+    text-decoration: none;
+    color: navy;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab_content a:hover {
+    opacity: 0.6;
+}
+
+.tab_content del {
+    color: goldenrod;
+}
+
+.tab_content button {
+    width: 50%;
+    padding: 10px;
+    background-color: #edf3f3;
+    border: 1px solid navy;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.tab_content button:hover {
+    background-color: #b7d0d0;
+    color: white;
+}
+
+/* footer design  */
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(49, 149, 249, 0.931);
+    margin-top: 100px;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+}
+
+.about, .resource, .contact, h4 {
+    text-align: center;
+    color: white;
+    font-size: medium;
+    text-align: left;
+}
+.about, .resource, .contact {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.about, .resource, .contact, a {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    /* background-color: blue; */
+    text-align: left;
+    justify-content: center;
+}
+
+.about, .resource, .contact, a:hover {
+    color: black;
+}
+
+.about {
+    margin-left: 50px;
+}
+
+.update {
+    width: 40%;
+    margin-right: 0;
+}
+.update p {
+    color: white;
+    font-size: small;
+}
+
+.update input {
+    padding: 3px;
+}
+.update button {
+    background-color: rgb(15, 15, 238);
+    border: 1px solid #ccc;
+    padding: 3px;
+    color: #ccc;
+}
+
+.update button:hover {
+    background-color: rgb(22, 95, 230);
+    color: white;
+}
+
+.end {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.terms {
+    margin-left: 50px;
+}
+
+.me p {
+    color: white;
+    font-size: small;
+    margin-right: 90px;
+    line-height: 3px;
+}
+
+.body_hr {
+    margin-top: 80px;
+}
+
+/* resulotion for another devices  */
+@media screen and (max-width: 600px) {
+    .logo img {
+        height: 232px;
+    }
+    .left_header ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .right_header {
+        width: 20%;
+    }
+    .tab1_container, .tab2_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   .tab_box button {
+       width: 100%;
+   }
+   .info {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+.about {
+    margin: 0;
+}
+.me p {
+    margin-top: 0;
+}
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/pharmacyLogo.png" alt="">
+         </div>
+        <div class="left_header">
+            <ul>
+                <a href="pharmacy.html">Medicines</a>
+                <!-- <a href="capsule.html">Capsules</a>
+                <a href="syrup.html">Syrups</a>
+                <a href="ointment.html">Ointments</a>
+                <a href="injection.html">Injections</a> -->
+            </ul>
+        </div>
+         <div class="right_header">
+            <button onclick="pageRedirect()">LOGIN</button>
+         </div>
+    </header>
+        <!-- body text area  -->
+        <div class="title_area">
+            <h3>Tablets</h3>
+            <hr style="width:5%;">
+            <p>New Prices</p>
+        </div>
+    
+        <!-- body section  for tablets -->
+        <div class="tab1_container">
+            <div class="tab_box">
+                <img src="images/pregablin.jpg" alt="pregablin">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        pregablin</a>
+                    <h3>Price</h3>
+                    <p>4.00$ <del>5.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/aceto.jpg" alt="acetominaphin">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Acetominaphen</a>
+                    <h3>Price</h3>
+                    <p>5.00$ <del>6.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/parac.jpg" alt="paractamol">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Paracetamol</a>
+                    <h3>Price</h3>
+                    <p>2.00$ <del>3.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/bruffen.jpg" alt="bruffen">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Ibuprofen</a>
+                    <h3>Price</h3>
+                    <p>3.50$ <del>5.50$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="tab2_container">
+            <div class="tab_box">
+                <img src="images/cap5.jpg" alt="azitromyphen">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Azetromyphine</a>
+                    <h3>Price</h3>
+                    <p>7.40$ <del>8.30$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/tab7.jpg" alt="hevert">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Hevert</a>
+                    <h3>Price</h3>
+                    <p>2.90$ <del>3.80$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/tab8.jpg" alt="agmenten">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Agmentein</a>
+                    <h3>Price</h3>
+                    <p>3.00$ <del>3.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/tab1.jpg" alt="pregablin">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        pregablin</a>
+                    <h3>Price</h3>
+                    <p>4.00$ <del>5.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+        <hr class="body_hr">
+    
+        <!-- text area for capsules  -->
+        <div class="title_area">
+            <h3>Capsules</h3>
+            <hr style="width:5%;">
+            <p>New Products</p>
+        </div>
+    
+        <!-- capsules section  -->
+        <div class="tab1_container">
+            <div class="tab_box">
+                <img src="images/vitamin.jpg" alt="vitamin">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Vitamin-A</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/codral1.jpg" alt="codral">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Codral</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/omega.jpg" alt="omega">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Omega3</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/covid.jpg" alt="covid">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Covid-19</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="tab2_container">
+            <div class="tab_box">
+                <img src="images/lemsip.jpg" alt="codral">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Codral</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/omega.jpg" alt="omega3">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        omega3</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/cap2.jpg" alt="sweet">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Kratreil</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/vitamin.jpg" alt="vitaminA">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Vitamin-A</a>
+                    <h3>Rate</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+        <hr class="body_hr">
+    
+        <!-- text area for syrups  -->
+        <div class="title_area">
+            <h3>Syrups</h3>
+            <hr style="width:5%;">
+            <p>New Prices</p>
+        </div>
+    
+        <!-- syrups section  -->
+        <div class="tab1_container">
+            <div class="tab_box">
+                <img src="images/vasa.jpg" alt="vasa">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Vasa</a>
+                    <h3>Price</h3>
+                    <p>8.00$ <del>10.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/topl.jpg" alt="toplexil">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Toplexil</a>
+                    <h3>Price</h3>
+                    <p>5.10$ <del>6.40$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/sale.jpg" alt="sale">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Sale</a>
+                    <h3>Price</h3>
+                    <p>3.30$ <del>4.40$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/kofl.jpg" alt="koflet">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Koflet</a>
+                    <h3>Price</h3>
+                    <p>12.00$ <del>15.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="tab2_container">
+            <div class="tab_box">
+                <img src="images/syr2.jpg" alt="acetominaphin">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Acetaminophen</a>
+                    <h3>Price</h3>
+                    <p>7.40$ <del>8.80$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/syr7.jpg" alt="alpha">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Alpha</a>
+                    <h3>Price</h3>
+                    <p>25.00$ <del>28.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/syr3.jpg" alt="anitacid">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Anti-Acid</a>
+                    <h3>Price</h3>
+                    <p>9.40$ <del>11.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/syr9.jpg" alt="pregablin">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        pregablin</a>
+                    <h3>Price</h3>
+                    <p>4.00$ <del>5.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+        <hr class="body_hr">
+    
+        <!-- text area for ointments  -->
+        <div class="title_area">
+            <h3>Ointments</h3>
+            <hr style="width:5%;">
+            <p>Best Prices</p>
+        </div>
+    
+        <!-- ointment section  -->
+        <div class="tab1_container">
+            <div class="tab_box">
+                <img src="images/rhemo.jpg" alt="rhemo">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Rheumogel</a>
+                    <h3>Price</h3>
+                    <p>8.80$ <del>10.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/nengay.jpg" alt="bengay">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Bengay</a>
+                    <h3>Price</h3>
+                    <p>5.00$ <del>6.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/somo.jpg" alt="somo">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Somogel</a>
+                    <h3>Price</h3>
+                    <p>9.30$ <del>11.10$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/icyhot.jpg" alt="icyhot">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        IcyHot</a>
+                    <h3>Price</h3>
+                    <p>14.00$ <del>15.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+        <hr class="body_hr">
+    
+        <!-- injection text area  -->
+        <div class="title_area">
+            <h3>Injections</h3>
+            <hr style="width:5%;">
+            <p>Prices</p>
+        </div>
+        <!-- injection section  -->
+        <div class="tab1_container">
+            <div class="tab_box">
+                <img src="images/inj13.jpeg" alt="ceftraxone">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Ceftriaxone</a>
+                    <h3>Price</h3>
+                    <p>8.80$ <del>10.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/wellc.jpg" alt="wellcef">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Wellceft</a>
+                    <h3>Price</h3>
+                    <p>5.00$ <del>6.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/inj11.jpg" alt="azitroprime">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Aczita</a>
+                    <h3>Price</h3>
+                    <p>9.30$ <del>11.10$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+    
+            <div class="tab_box">
+                <img src="images/inj12.jpg" alt="wellc">
+                <div class="tab_content">
+                    <a href="https://medlineplus.gov/painrelievers.html" target="_blank">
+                        Wellceft-1g</a>
+                    <h3>Price</h3>
+                    <p>14.00$ <del>15.00$</del></p>
+                    <button onclick="purchase()">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- footer section  -->
+        <footer>
+            <div class="info">
+                <div class="about">
+                    <h4>About</h4>
+                    <a href="author.html">Author</a>
+                    <a href="">Pricing</a>
+                    <a href="">Owner</a>
+                    <a href="">Customers</a>
+                </div>
+    
+                <div class="resource">
+                    <h4>Resource</h4>
+                    <a href="">Date</a>
+                    <a href="">Blogs</a>
+                    <a href="">Global</a>
+                </div>
+    
+                <div class="contact">
+                    <h4>Contact</h4>
+                    <a href="">Help</a>
+                    <a href="">Sales</a>
+                </div>
+    
+                <div class="update">
+                    <h4>Stay Updated</h4>
+                    <p>subscribe for new news from Akmal</p>
+                    <input type="email" placeholder="your email address">
+                    <button><a href="https://www.youtube.com/">subscribe</a></button>
+                </div>
+            </div>
+            <hr style="width: 95%;">
+            <div class="end">
+                <div class="terms">
+                    <a href="">Terms & Conditions</a>
+                </div>
+    
+                <div class="privacy">
+                    <a href="">Privacy Policy</a>
+                </div>
+                <div class="me">
+                    <p>&copy; 2022 copyright Akmal&spades;</p>
+                    <p>&reg; by Akmal Nawabi</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
